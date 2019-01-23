@@ -1,0 +1,45 @@
+.cardWarp {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin: 10px 10px;
+  background-color: #ffffff;
+  border: 1px solid #ECECEE;
+  border-radius: 8px;
+  color: #666;
+}
+
+.clockWrap {
+  border: 2px solid #666;
+}
+
+.cardWarp:hover {
+  box-shadow: #ececec 5px 5px 20px 8px;
+}
+
+.cardAvator {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 20px;
+}
+
+.cardContent {
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardName {
+  padding-bottom: 10px;
+}
+
+.cardNum {
+  padding-top: 10px;
+}
+
+.num {
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 3px;
+}

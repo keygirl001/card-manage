@@ -1,0 +1,16 @@
+
+.App {
+  height: 100%;
+  padding: 30px 15px;
+  background-color: #F5F5F5;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+}

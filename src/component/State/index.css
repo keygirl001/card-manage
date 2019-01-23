@@ -1,0 +1,16 @@
+.stateWrap {
+  display: flex;
+  flex-direction: row;
+  min-height: 25px;
+}
+
+.stateContent {
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 1px 7px;
+  margin-right: 5px;
+}
+
+.content {
+  padding-left: 3px;
+}

@@ -49,12 +49,12 @@ export default class App extends Component {
       <div className="App">
         <StateSelect onhandleClickChangeName={this.onhandleClickChange} menus={menus}/>
         <div className="cards" >
-        {
-          cardDatas && cardDatas.length > 0 && cardDatas.map((item, index) => (
-            <MsenCard data={item} key={index}/>
-          ))
-        }
-        <AddCard clickAddNew={this.clickAddNew}/>
+          {
+            cardDatas && cardDatas.length > 0 && cardDatas.map((item, index) => (
+              <MsenCard data={item} key={index}/>
+            ))
+          }
+          <AddCard clickAddNew={this.clickAddNew}/>
         </div>
       </div>
     );

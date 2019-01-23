@@ -24,6 +24,7 @@ export default class StateSelect extends Component {
   }
 
   render() {
+    // 设置下拉菜单
     const menu = (
       <Menu onClick={this.onhandleClick}>
         <Menu.Item key="所有项目组">

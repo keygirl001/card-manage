@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Icon } from 'antd';
 import propTypes from 'prop-types';
-// import { stateConstant } from '../../constant/index';
 import './index.css';
 
 export default class StateStyle extends Component {
@@ -16,21 +15,23 @@ export default class StateStyle extends Component {
     isPrivate: false
   }
 
+  // CLOCK结构
   renderClockState = (isClock) => {
     if (isClock) {
       return (<div className="stateContent">
         <Icon type='lock' theme="filled" />
         <span className="content">锁定</span>
-      </div>)
+      </div>);
     }
   }
 
+  // PRIVATE结构
   renderPrivateState = (isPrivate) => {
     if (isPrivate) {
       return (<div className="stateContent">
         <Icon type='eye-invisible' theme="filled" />
         <span className="content">私密</span>
-      </div>)
+      </div>);
     }
   }
 

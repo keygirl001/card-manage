@@ -3,6 +3,7 @@ import StateSelect from '../component/Select/index';
 import MsenCard from '../component/Card/index';
 import AddCard from '../component/addCard/index';
 import cardDatas from '../mock/cardData.json';
+import { menus } from '../constant/index';
 import './App.css';
 
 export default class App extends Component {
@@ -46,7 +47,7 @@ export default class App extends Component {
     const { cardDatas } = this.state;
     return (
       <div className="App">
-        <StateSelect onhandleClickChangeName={this.onhandleClickChange}/>
+        <StateSelect onhandleClickChangeName={this.onhandleClickChange} menus={menus}/>
         <div className="cards" >
         {
           cardDatas && cardDatas.length > 0 && cardDatas.map((item, index) => (

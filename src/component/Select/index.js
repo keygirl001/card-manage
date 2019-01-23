@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Menu, Dropdown, Icon } from 'antd';
+import propTypes from 'prop-types';
 import './index.css';
 
 export default class StateSelect extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -24,18 +26,20 @@ export default class StateSelect extends Component {
   }
 
   render() {
-    // 设置下拉菜单
+    const { menus } = this.props;
+    // 设置下拉菜单，所有项目组是默认一定会存在的
     const menu = (
       <Menu onClick={this.onhandleClick}>
         <Menu.Item key="所有项目组">
           <a href="#all">所有项目组</a>
         </Menu.Item>
-        <Menu.Item key="锁定">
-          <a href="#clock">锁定</a>
-        </Menu.Item>
-        <Menu.Item key="私密">
-          <a href="#private">私密</a>
-        </Menu.Item>
+        {
+          menus.map(item => (
+            <Menu.Item key={item.name}>
+              <a href={item.hash}>{item.name}</a>
+            </Menu.Item>
+          ))
+        }
       </Menu>
     )
 
@@ -51,4 +55,8 @@ export default class StateSelect extends Component {
       </div>
     );
   }
+}
+
+StateSelect.propTypes = {
+  menus: propTypes.array
 }

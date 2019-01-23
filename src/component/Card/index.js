@@ -5,20 +5,6 @@ import './index.css';
 
 export default class MsenCard extends Component {
 
-  static propTypes = {
-    data: propTypes.object
-  }
-
-  static defaultProps = {
-    data: {
-      "name": "墨刀实验室",
-      "num": 3,
-      "color": "#81D395",
-      "isClock": false,
-      "isPrivate": false
-    }
-  }
-
   render() {
     const { data } = this.props;
     const clockWrap = data.isClock && 'clockWrap'; // 锁定的classname
@@ -35,5 +21,19 @@ export default class MsenCard extends Component {
         </div>
       </div>
     );
+  }
+}
+
+MsenCard.propTypes = {
+  data: propTypes.object
+}
+
+MsenCard.defaultProps = {
+  data: {
+    "name": "墨刀实验室",
+    "num": 3,
+    "color": "#81D395",
+    "isClock": false,
+    "isPrivate": false
   }
 }

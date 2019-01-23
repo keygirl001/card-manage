@@ -5,16 +5,6 @@ import './index.css';
 
 export default class StateStyle extends Component {
 
-  static propTypes = {
-    isClock: propTypes.bool,
-    isPrivate: propTypes.bool
-  }
-
-  static defaultProps = {
-    isClock: false,
-    isPrivate: false
-  }
-
   // CLOCK结构
   renderClockState = (isClock) => {
     if (isClock) {
@@ -44,4 +34,14 @@ export default class StateStyle extends Component {
       </div>
     );
   }
+}
+
+StateStyle.propTypes = {
+  isClock: propTypes.bool,
+  isPrivate: propTypes.bool
+}
+
+StateStyle.defaultProps = {
+  isClock: false,
+  isPrivate: false
 }

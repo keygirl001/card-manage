@@ -21,7 +21,7 @@ export default class MsenCard extends Component {
 
   render() {
     const { data } = this.props;
-    const clockWrap = data.isClock && 'clockWrap';
+    const clockWrap = data.isClock && 'clockWrap'; // 锁定的classname
     return (
       <div className={["cardWarp", clockWrap].join(' ')}>
         <div className="cardAvator" style={{ backgroundColor: data.color }}/>

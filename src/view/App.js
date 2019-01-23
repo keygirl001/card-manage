@@ -7,17 +7,49 @@ import './App.css';
 
 export default class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      cardDatas: cardDatas.data
+    }
+  }
+
+  // 点击创建
   clickAddNew = () => {
     alert('确定新建一个项目组！');
   }
 
+  setCardDatas = (data) => {
+    this.setState({
+      cardDatas: data
+    });
+  }
+
+  // 根据select设置不同的data
+  onhandleClickChange = (value) => {
+    let data = [];
+    switch(value) {
+      case '锁定':
+        data = cardDatas.data.filter(item => item.isClock);
+        this.setCardDatas(data);
+        break;
+      case '私密':
+        data = cardDatas.data.filter(item => item.isPrivate);
+        this.setCardDatas(data);
+        break;
+      default:
+      this.setCardDatas(cardDatas.data);
+    };
+  }
+
   render() {
+    const { cardDatas } = this.state;
     return (
       <div className="App">
-        <StateSelect />
+        <StateSelect onhandleClickChangeName={this.onhandleClickChange}/>
         <div className="cards" >
         {
-          cardDatas.data && cardDatas.data.length > 0 && cardDatas.data.map((item, index) => (
+          cardDatas && cardDatas.length > 0 && cardDatas.map((item, index) => (
             <MsenCard data={item} key={index}/>
           ))
         }

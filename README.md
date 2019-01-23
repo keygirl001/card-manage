@@ -2,14 +2,14 @@
 
 git clone到本地；
 
-## npm install -- 下载依赖
-## npm start -- 启动（3000端口）
+### npm install -- 下载依赖
+### npm start -- 启动（3000端口）
 
 src：    
   view -- App.js(主界面)     
   component      
             -- Card（每个卡片）       
-                   -- State（锁定和私密结构）      
+                        -- State（锁定和私密结构）      
             -- addCard（新建卡片）     
             -- Select（下拉选项）       
   mock（mock数据）      

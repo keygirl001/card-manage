@@ -49,7 +49,8 @@ export default class StateSelect extends Component {
       <div className="selectWrap">
         <Dropdown overlay={menu} trigger={['click']} >
           <a className="ant-dropdown-link" href="#all">
-            {name} <Icon type="down" />
+            {name}
+            <Icon type="down" />
           </a>
         </Dropdown>
       </div>
@@ -58,5 +59,6 @@ export default class StateSelect extends Component {
 }
 
 StateSelect.propTypes = {
-  menus: propTypes.array
+  menus: propTypes.array,
+  onhandleClickChangeName: propTypes.func
 }

@@ -39,7 +39,8 @@ export default class App extends Component {
         this.setCardDatas(data);
         break;
       default:
-      this.setCardDatas(cardDatas.data);
+        data = cardDatas.data;
+        this.setCardDatas(data);
     };
   }
 
